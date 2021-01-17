@@ -5,6 +5,7 @@ from torch.utils import data
 from torch.utils.data import DataLoader
 import torchvision.transforms as T
 from PIL import Image
+import torch
 
 
 class Dataset(data.Dataset):
@@ -61,8 +62,14 @@ def get_transform(config, is_train):
 def get_dataloader(config):
     transform_img_train, transform_label_train = get_transform(config, is_train=True)
     transform_img_val, transform_label_val = get_transform(config, is_train=False)
+    
     train_set = Dataset(config['root']+'/train', config['size'], transform_img_train, transform_label_train)
-    val_set = Dataset(config['root']+'/validate', config['size'], transform_img_val, transform_label_val)
+    # val_set = Dataset(config['root']+'/validate', config['size'], transform_img_val, transform_label_val)
+    train_set, val_set = torch.utils.data.random_split(train_set,[int(0.9*len(train_set)),len(train_set)-int(0.9*len(train_set))])
+    
     train_loader = DataLoader(train_set, batch_size=config['batch_size'], shuffle=True, num_workers=0, drop_last=False)
+    
     val_loader = DataLoader(val_set, batch_size=1, shuffle=False, num_workers=0, drop_last=False)
+
+    
     return train_loader, val_loader

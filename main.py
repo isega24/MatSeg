@@ -12,6 +12,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from tqdm import tqdm
 
+torch.set_num_threads(3)
+
 from datasets import Dataset, get_dataloader, get_transform
 from utils import AverageMeter, Recorder, accuracy, metrics
 from models import model_mappings

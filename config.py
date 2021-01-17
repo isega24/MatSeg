@@ -31,6 +31,66 @@ config = {
         'v5': {'model': 'unet', 'aug': True},
         'v6': {'model': 'segnet', 'aug': True, 'optimizer': 'SGD', 'lr': 0.01}
     },
+    'uhcs-fold-0': {
+        'default': gen_default('uhcs-fold-0', n_class=4, size=(484, 645),
+                               mean=[0.449, 0.449, 0.449], std=[0.168, 0.168, 0.168]),
+        'v1': {'model': 'pixelnet'},
+        'v2': {'model': 'unet'},
+        'v3': {'model': 'segnet', 'optimizer': 'SGD', 'lr': 0.01},
+        'v4': {'model': 'pixelnet', 'aug': True},
+        'v5': {'model': 'unet', 'aug': True},
+        'v6': {'model': 'segnet', 'aug': True, 'optimizer': 'SGD', 'lr': 0.01}
+    },
+    'uhcs-fold-1': {
+        'default': gen_default('uhcs-fold-1', n_class=4, size=(484, 645),
+                               mean=[0.449, 0.449, 0.449], std=[0.168, 0.168, 0.168]),
+        'v1': {'model': 'pixelnet'},
+        'v2': {'model': 'unet'},
+        'v3': {'model': 'segnet', 'optimizer': 'SGD', 'lr': 0.01},
+        'v4': {'model': 'pixelnet', 'aug': True},
+        'v5': {'model': 'unet', 'aug': True},
+        'v6': {'model': 'segnet', 'aug': True, 'optimizer': 'SGD', 'lr': 0.01}
+    },
+    'uhcs-fold-2': {
+        'default': gen_default('uhcs-fold-2', n_class=4, size=(484, 645),
+                               mean=[0.449, 0.449, 0.449], std=[0.168, 0.168, 0.168]),
+        'v1': {'model': 'pixelnet'},
+        'v2': {'model': 'unet'},
+        'v3': {'model': 'segnet', 'optimizer': 'SGD', 'lr': 0.01},
+        'v4': {'model': 'pixelnet', 'aug': True},
+        'v5': {'model': 'unet', 'aug': True},
+        'v6': {'model': 'segnet', 'aug': True, 'optimizer': 'SGD', 'lr': 0.01}
+    },
+    'uhcs-fold-3': {
+        'default': gen_default('uhcs-fold-3', n_class=4, size=(484, 645),
+                               mean=[0.449, 0.449, 0.449], std=[0.168, 0.168, 0.168]),
+        'v1': {'model': 'pixelnet'},
+        'v2': {'model': 'unet'},
+        'v3': {'model': 'segnet', 'optimizer': 'SGD', 'lr': 0.01},
+        'v4': {'model': 'pixelnet', 'aug': True},
+        'v5': {'model': 'unet', 'aug': True},
+        'v6': {'model': 'segnet', 'aug': True, 'optimizer': 'SGD', 'lr': 0.01}
+    },
+    'uhcs-fold-4': {
+        'default': gen_default('uhcs-fold-4', n_class=4, size=(484, 645),
+                               mean=[0.449, 0.449, 0.449], std=[0.168, 0.168, 0.168]),
+        'v1': {'model': 'pixelnet'},
+        'v2': {'model': 'unet'},
+        'v3': {'model': 'segnet', 'optimizer': 'SGD', 'lr': 0.01},
+        'v4': {'model': 'pixelnet', 'aug': True},
+        'v5': {'model': 'unet', 'aug': True},
+        'v6': {'model': 'segnet', 'aug': True, 'optimizer': 'SGD', 'lr': 0.01}
+    },
+    'uhcs-fold-5': {
+        'default': gen_default('uhcs-fold-5', n_class=4, size=(484, 645),
+                               mean=[0.449, 0.449, 0.449], std=[0.168, 0.168, 0.168]),
+        'v1': {'model': 'pixelnet'},
+        'v2': {'model': 'unet'},
+        'v3': {'model': 'segnet', 'optimizer': 'SGD', 'lr': 0.01},
+        'v4': {'model': 'pixelnet', 'aug': True},
+        'v5': {'model': 'unet', 'aug': True},
+        'v6': {'model': 'segnet', 'aug': True, 'optimizer': 'SGD', 'lr': 0.01}
+    },
     'tomography': {
         'default': gen_default('tomography', n_class=2, size=(852, 852),
                                mean=[0.504, 0.504, 0.504], std=[0.051, 0.051, 0.051]),
